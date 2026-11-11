@@ -1,0 +1,4 @@
+<li>
+  <div class="tree-node"><span class="avatar">{{ node.name[:1]|upper }}</span><span class="tree-name">{{ node.name }}</span><span class="tree-email">{{ node.email }}</span></div>
+  {% if node.children %}<ul>{% for node in node.children %}{% include 'tree_node.html' %}{% endfor %}</ul>{% endif %}
+</li>
